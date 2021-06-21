@@ -22,8 +22,8 @@ POST
 ```
 
 ### get all movies
-GET 
-/api/movies  
+GET  
+/api/movies   
 
 ### add a movie
 
