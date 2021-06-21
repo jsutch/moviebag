@@ -12,12 +12,14 @@ POST
 ```
 
 ### login
-
-/api/auth/login
+POST  
+/api/auth/login  
+```
 {
     "email":"aaa@test.com",
     "password":"mypassword"
 }
+```
 
 ### get all movies
 GET 
