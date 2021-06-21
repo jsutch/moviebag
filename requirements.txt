@@ -1,0 +1,8 @@
+flask
+flask_mongoengine
+flask-bcrypt
+flask-restful
+flask-jwt-extended
+flask_mail
+mysql-connector
+mongoengine-goodjson
