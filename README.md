@@ -62,7 +62,7 @@ DELETE
 
 Needs a "creds.py" file at root in the following format.
 
-````
+```
 mongouser = 'myUsername'
 mongopassword = 'myPassword'
 JWT_SECRET_KEY = "JWTSecretKeyString"
