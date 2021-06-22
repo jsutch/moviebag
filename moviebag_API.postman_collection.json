@@ -1,0 +1,675 @@
+{
+	"info": {
+		"_postman_id": "b53ef2a6-44d6-45f0-b32c-ff2fa6591b9a",
+		"name": "yoda - API",
+		"description": "flask to yoda tutorial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Simple Dump of All Titles",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add movie heist - POST http://localhost:5000/api/movies",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MDAyODM0OTMsIm5iZiI6MTYwMDI4MzQ5MywianRpIjoiM2EwNmZiM2YtZDFhYy00ZTc1LTgwMDUtNDgxYjUzNmM1MzllIiwiZXhwIjoxNjAwODg4MjkzLCJpZGVudGl0eSI6IjVmNjE1ODFmNzA0ZTEyYjZhMWIzYjExYyIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyJ9.CDeHCMUQwIK2Pryh35NaSecgief__cqiiufjHS5GIR0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Heist2\",\n    \"casts\": [\"Ricky Jay\",\"Gene Hackman\",\"Rebecca Pidgeon\"],\n    \"genres\": [\"Drama\",\"Heist\"]\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add movie shawshank - JWT - POST http://localhost:5000/api/movies",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYyNDIxMzQ0NywianRpIjoiODE1YjdkMjktMzFlZi00ZmViLWE3ZTgtZGJiOTU0ZjZhZTNhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjYwY2Y3ZDNlZWI2NjUxNDg5OGU4Y2MwMiIsIm5iZiI6MTYyNDIxMzQ0NywiZXhwIjoxNjI0ODE4MjQ3fQ.O313haKZ1rEdgXftL81vpReRncstnAcVaWOaeGQpeKk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Shawshank Redemption\",\n    \"casts\": ['Tim Robbins', 'Morgan Freeman', 'Bob Gunton', 'William Sadler'],\n    \"genres\": [\"Drama\"]\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add movie blahfather - POST http://localhost:5000/movies Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MDAyODM0OTMsIm5iZiI6MTYwMDI4MzQ5MywianRpIjoiM2EwNmZiM2YtZDFhYy00ZTc1LTgwMDUtNDgxYjUzNmM1MzllIiwiZXhwIjoxNjAwODg4MjkzLCJpZGVudGl0eSI6IjVmNjE1ODFmNzA0ZTEyYjZhMWIzYjExYyIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyJ9.CDeHCMUQwIK2Pryh35NaSecgief__cqiiufjHS5GIR0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n       \"name\": \"Blahfather2 Blah Blah Blah Blah\",\n       \"casts\": [\"Alice Brando\", \"Bob Pacino\", \"Charlie Caan\", \"Diane Keaton\"],\n       \"genres\": [\"XCCCXXXXX\", \"Drama\",\"stupidity\"]\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modify shawshank - JWT - PUT http://localhost:5000/api/movies",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MDAyODM0OTMsIm5iZiI6MTYwMDI4MzQ5MywianRpIjoiM2EwNmZiM2YtZDFhYy00ZTc1LTgwMDUtNDgxYjUzNmM1MzllIiwiZXhwIjoxNjAwODg4MjkzLCJpZGVudGl0eSI6IjVmNjE1ODFmNzA0ZTEyYjZhMWIzYjExYyIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyJ9.CDeHCMUQwIK2Pryh35NaSecgief__cqiiufjHS5GIR0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Shawshank Redemption On Mars Part 2\",\n    \"casts\": [\"Tim Robbins\", \"Morgan Freeman\", \"Bob Gunton\", \"William Sadler\"],\n    \"genres\": [\"Drama\"]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/movies/60ceb677e0d040c46d061b29",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"movies",
+						"60ceb677e0d040c46d061b29"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modify godfather - PUT",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MDAyODM0OTMsIm5iZiI6MTYwMDI4MzQ5MywianRpIjoiM2EwNmZiM2YtZDFhYy00ZTc1LTgwMDUtNDgxYjUzNmM1MzllIiwiZXhwIjoxNjAwODg4MjkzLCJpZGVudGl0eSI6IjVmNjE1ODFmNzA0ZTEyYjZhMWIzYjExYyIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyJ9.CDeHCMUQwIK2Pryh35NaSecgief__cqiiufjHS5GIR0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n       \"name\": \"The Godfather Eats Chocolate Cake\",\n       \"casts\": [\"Marlon Brando\", \"Al Pacino\", \"James Caan\", \"Diane Keaton\"],\n       \"genres\": [\"Crime\", \"Drama\"]\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/movies/60ceb677e0d040c46d061b29",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"movies",
+						"60ceb677e0d040c46d061b29"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete movie",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/movies/60ceb659ac0b5cde654cbf44",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"movies",
+						"60ceb659ac0b5cde654cbf44"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete Shawshank 2 - JWT",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/movies/60ceb659ac0b5cde654cbf44",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"movies",
+						"60ceb659ac0b5cde654cbf44"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup w/clientid - POST http://localhost:5000/api/auth/signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"aaa@bob.com\",\n    \"password\":\"asdfasdf\",\n    \"clientId\":\"6666662\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup no clientid - POST http://localhost:5000/api/auth/signup",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MDAzNzIwMDAsIm5iZiI6MTYwMDM3MjAwMCwianRpIjoiOTQwMzAxYmMtNzQ4Zi00M2I2LTgwYzItOWRlODhlMmMwYTliIiwiZXhwIjoxNjAwOTc2ODAwLCJpZGVudGl0eSI6IjVmNjNhOTliNTcwZWFjZTkyNDdmZjczNiIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyJ9.SraeCLXGlcknWDIB6I2B31HHagiZqH_SsaqwWSlpiak",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"aaa@bob.com\",\n    \"password\":\"asdfasdf\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup - walrii - no clientid - POST http://localhost:5000/api/auth/signup",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MDAzNzIwMDAsIm5iZiI6MTYwMDM3MjAwMCwianRpIjoiOTQwMzAxYmMtNzQ4Zi00M2I2LTgwYzItOWRlODhlMmMwYTliIiwiZXhwIjoxNjAwOTc2ODAwLCJpZGVudGl0eSI6IjVmNjNhOTliNTcwZWFjZTkyNDdmZjczNiIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyJ9.SraeCLXGlcknWDIB6I2B31HHagiZqH_SsaqwWSlpiak",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"bob@walrii.net\",\n    \"password\":\"asdfasdf\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login w/JWT - w/clientid - POST http://localhost:5000/api/auth/login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// get the response data",
+							"var jsonData = JSON.parse(responseBody);",
+							"// test if value not null",
+							"tests[\"Check for JWT\"]  = jsonData.access_token !== undefined;",
+							"// set the environment var with the token",
+							"pm.environment.set(\"jwt_token\", \"jsonData.access_token\");",
+							"pm.environment.get(\"jwt_token\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"aab@bob.com\",\n    \"password\":\"asdfasdf\",\n    \"clientId\":\"6666663\" \n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login w/JWT - no clientid - POST http://localhost:5000/api/auth/login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// get the response data",
+							"var jsonData = JSON.parse(responseBody);",
+							"// test if value not null",
+							"tests[\"Check for JWT\"]  = jsonData.access_token !== undefined;",
+							"// set the environment var with the token",
+							"pm.environment.set(\"jwt_token\", \"jsonData.access_token\");",
+							"pm.environment.get(\"jwt_token\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MDAzNzIwMDAsIm5iZiI6MTYwMDM3MjAwMCwianRpIjoiOTQwMzAxYmMtNzQ4Zi00M2I2LTgwYzItOWRlODhlMmMwYTliIiwiZXhwIjoxNjAwOTc2ODAwLCJpZGVudGl0eSI6IjVmNjNhOTliNTcwZWFjZTkyNDdmZjczNiIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyJ9.SraeCLXGlcknWDIB6I2B31HHagiZqH_SsaqwWSlpiak",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"aaa@bob.com\",\n    \"password\":\"asdfasdf\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forgot password bob - GET http://localhost:5000/api/auth/forgot",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"tom@bob.com\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/forgot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"forgot"
+					]
+				},
+				"description": "forgot password"
+			},
+			"response": []
+		},
+		{
+			"name": "forgot password - walrii - GET http://localhost:5000/api/auth/forgot",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"bob@walrii.net\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/forgot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"forgot"
+					]
+				},
+				"description": "forgot password"
+			},
+			"response": []
+		},
+		{
+			"name": "reset password - GET http://localhost:5000/api/auth/reset",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\":\"qweqweqwe\",\n    \"reset_token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MDAzMjQyMzUsIm5iZiI6MTYwMDMyNDIzNSwianRpIjoiZDkyMzJiMjktYTc5MC00YTgxLWJkYTQtYjliODNmNjM3ZWQ4IiwiZXhwIjoxNjAwNDEwNjM1LCJpZGVudGl0eSI6IjVmNjMwMjQxNGJkZDRhOTBiMjg3NTIxNyIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyJ9.C5fEU2w_vTM5J32HSZTzTru4yD4J9HKFmqwlN7y5jSA\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/reset",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"reset"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reset password - raw http string",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/reset/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYyNDIyODQ0OSwianRpIjoiNjFkZTAyZGQtZmNlNi00NzA5LTlkZWEtYmVjOWIwYmU0OWQ5Iiwid\nHlwZSI6ImFjY2VzcyIsInN1YiI6IjYwY2ZjMjU0NWNkYTY5YmNkZTkxMDE2MiIsIm5iZiI6MTYyNDIyODQ0OSwiZXhwIjoxNjI0MzE0ODQ5fQ.NWOaC2PDhSxlUpMHCd30w5vpSFW4ao03jQycHPpXj-A",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"reset",
+						"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYyNDIyODQ0OSwianRpIjoiNjFkZTAyZGQtZmNlNi00NzA5LTlkZWEtYmVjOWIwYmU0OWQ5Iiwid\nHlwZSI6ImFjY2VzcyIsInN1YiI6IjYwY2ZjMjU0NWNkYTY5YmNkZTkxMDE2MiIsIm5iZiI6MTYyNDIyODQ0OSwiZXhwIjoxNjI0MzE0ODQ5fQ.NWOaC2PDhSxlUpMHCd30w5vpSFW4ao03jQycHPpXj-A"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tasks - http://localhost:5000/task",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/task?n=20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"task"
+					],
+					"query": [
+						{
+							"key": "n",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
